@@ -11,8 +11,8 @@ namespace WindowsFormsApplication1
 {
     public partial class _3x3 : Form
     {
-        bool Tour = true; 
-        int CompteurDeTour = 0; 
+        
+         
         public _3x3()
         {
             InitializeComponent();
@@ -20,28 +20,38 @@ namespace WindowsFormsApplication1
 
         private void Click_Case(object sender, EventArgs e)
         {
-
-            Button b = (Button)sender; 
-
-            if (Tour == true)
+            try
             {
-                b.Enabled = false;
-                Tour = !Tour;
-                b.Text = "X";
-                CompteurDeTour++;
-                
-                check();
+                Controle controle = new Controle();
+                Button b = (Button)sender;
 
+                if (controle.ValeurTour() == true)
+                {
+                    b.Enabled = false;
+
+                    b.Text = "X";
+                    controle.Plus1Tour();
+
+
+                    check();
+
+                }
+                else if (controle.ValeurTour() == false)
+                {
+                    b.Enabled = false;
+
+                    b.Text = "O";
+
+                    controle.Plus1Tour();
+                    check();
+                }
             }
-            else
+            catch 
             {
-                b.Enabled = false;
-                Tour = !Tour;
-                b.Text = "O";
-                CompteurDeTour++;
-                
-                check();
-            }    
+
+               
+            }
+            
                  
                       
                 
@@ -51,6 +61,7 @@ namespace WindowsFormsApplication1
 
         public void check()
         {
+            Controle controle = new Controle();
             //Y'a t-il un winner ?
             bool YaTIlUnGagnant = false;
 
@@ -99,13 +110,13 @@ namespace WindowsFormsApplication1
             if (YaTIlUnGagnant)  
             {
                 string LettreGagnante = "";
-                if (Tour)
+                if (controle.ValeurTour())
                     LettreGagnante = "O";
                 else LettreGagnante = "X";
                 MessageBox.Show("Gagnant: " + LettreGagnante);
                 restart();
             }
-            else if (CompteurDeTour == 9)
+            else if (controle.ValeurCompteur() == 9)
             {
                 MessageBox.Show("Égalité");
                 restart();
@@ -114,6 +125,7 @@ namespace WindowsFormsApplication1
 
         private void restart()
         {
+            Controle controle = new Controle();
             //Redémarré les controles des Buttons
             foreach (Control b in Controls.OfType<Button>())
             {
@@ -122,9 +134,9 @@ namespace WindowsFormsApplication1
                 b.Text = "";
                 
             }
+            controle.ClearTour();
+            btn_Restart.Text = "Restart";
 
-            CompteurDeTour = 0;
-            Tour = true;
         }
 
         private void ButtonRestart(object sender, EventArgs e)
