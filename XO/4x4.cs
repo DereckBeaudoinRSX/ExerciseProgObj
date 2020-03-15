@@ -12,8 +12,7 @@ namespace WindowsFormsApplication1
     public partial class _4x4 : Form
     {
         Button LastButton = new Button();
-        bool Tour = true; 
-        int CompteurDeTour = 0;
+        
         public _4x4()
         {
             InitializeComponent();
@@ -22,34 +21,45 @@ namespace WindowsFormsApplication1
         private void Click_Case(object sender, EventArgs e)
         {
 
-            
-            Button b = (Button)sender;
-           
-
-            if (Tour == true)
+            try
             {
-                Tour = !Tour;
-                b.Text = "X";
-                CompteurDeTour++;
-                b.Enabled = false;
+                Controle controle = new Controle();
+                Button b = (Button)sender;
+
+                if (controle.ValeurTour() == true)
+                {
+                    b.Enabled = false;
+
+                    b.Text = "X";
+                    controle.Plus1Tour();
+
+
+                    check();
+
+                }
+                else if (controle.ValeurTour() == false)
+                {
+                    b.Enabled = false;
+
+                    b.Text = "O";
+
+                    controle.Plus1Tour();
+                    check();
+                }
+            }
+            catch 
+            {
+
                 
-                check();
-
-            }
-            else
-            {
-                Tour = !Tour;
-                b.Text = "O";
-                CompteurDeTour++;
-                b.Enabled = false;
-                check();
             }
             
+
 
 
         }
          public void check()
         {
+            Controle controle = new Controle();
             bool YaTIlUnGagnant = false;
 
             if ((btn_Case1Colone1.Text == btn_Case2Colone1.Text) && (btn_Case2Colone1.Text == btn_Case3Colone1.Text) && (btn_Case1Colone1.Text == Case4Colone1.Text) && btn_Case1Colone1.Text != "")
@@ -103,19 +113,19 @@ namespace WindowsFormsApplication1
             {
                 YaTIlUnGagnant = true;
             }
-               
+
 
 
             if (YaTIlUnGagnant)
             {
                 string LettreGagnante = "";
-                if (Tour)
+                if (controle.ValeurTour())
                     LettreGagnante = "O";
                 else LettreGagnante = "X";
                 MessageBox.Show("Gagnant: " + LettreGagnante);
                 restart();
             }
-            else if (CompteurDeTour == 16)
+            else if (controle.ValeurCompteur() == 16)
             {
                 MessageBox.Show("Égalité");
                 restart();
@@ -124,23 +134,23 @@ namespace WindowsFormsApplication1
 
          private void restart()
          {
-             foreach (Control b in Controls.OfType<Button>())
+            Controle controle = new Controle();
+            foreach (Control b in Controls.OfType<Button>())
              {
 
                  b.Enabled = true;
                  b.Text = "";
 
              }
-
-             CompteurDeTour = 0;
-             Tour = true;
-         }
+             
+             controle.ClearTour();
+        }
 
          private void ButtonRestart(object sender, EventArgs e)
          {
 
              restart();
-             button1.Text = "Restart";
+             Button_Restart.Text = "Restart";
          }
 
         private void _4x4_Load(object sender, EventArgs e)

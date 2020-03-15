@@ -44,7 +44,7 @@
 			this.btn_Case2Colone4 = new System.Windows.Forms.Button();
 			this.d3 = new System.Windows.Forms.Button();
 			this.Case4Colone4 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.Button_Restart = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// Case1Colone1
@@ -209,13 +209,13 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(224, 515);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(331, 47);
-			this.button1.TabIndex = 16;
-			this.button1.Text = "Restart";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.ButtonRestart);
+			this.Button_Restart.Location = new System.Drawing.Point(224, 515);
+			this.Button_Restart.Name = "button1";
+			this.Button_Restart.Size = new System.Drawing.Size(331, 47);
+			this.Button_Restart.TabIndex = 16;
+			this.Button_Restart.Text = "Restart";
+			this.Button_Restart.UseVisualStyleBackColor = true;
+			this.Button_Restart.Click += new System.EventHandler(this.ButtonRestart);
 			// 
 			// _4x4
 			// 
@@ -223,7 +223,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(772, 653);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.Button_Restart);
 			this.Controls.Add(this.Case4Colone4);
 			this.Controls.Add(this.d3);
 			this.Controls.Add(this.btn_Case2Colone4);
@@ -266,6 +266,6 @@
         private System.Windows.Forms.Button btn_Case2Colone4;
         private System.Windows.Forms.Button d3;
         private System.Windows.Forms.Button Case4Colone4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Button_Restart;
     }
 }

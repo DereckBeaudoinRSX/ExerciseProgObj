@@ -26,3 +26,13 @@ C:\Users\Derec\Desktop\XO\obj\x86\Debug\XO.exe
 C:\Users\Derec\Desktop\XO\obj\x86\Debug\XO.pdb
 C:\Users\Derec\Desktop\XO\obj\x86\Debug\WindowsFormsApplication1._3x3.resources
 C:\Users\Derec\Desktop\XO\obj\x86\Debug\WindowsFormsApplication1._4x4.resources
+C:\Users\Derec\Documents\Git\XO\bin\Debug\XO.exe
+C:\Users\Derec\Documents\Git\XO\bin\Debug\XO.pdb
+C:\Users\Derec\Documents\Git\XO\obj\x86\Debug\XO.csprojAssemblyReference.cache
+C:\Users\Derec\Documents\Git\XO\obj\x86\Debug\WindowsFormsApplication1.menu.resources
+C:\Users\Derec\Documents\Git\XO\obj\x86\Debug\WindowsFormsApplication1._3x3.resources
+C:\Users\Derec\Documents\Git\XO\obj\x86\Debug\WindowsFormsApplication1._4x4.resources
+C:\Users\Derec\Documents\Git\XO\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Derec\Documents\Git\XO\obj\x86\Debug\XO.csproj.GenerateResource.cache
+C:\Users\Derec\Documents\Git\XO\obj\x86\Debug\XO.exe
+C:\Users\Derec\Documents\Git\XO\obj\x86\Debug\XO.pdb
