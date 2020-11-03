@@ -1,0 +1,9 @@
+C:\Users\Derec\Desktop\ExeriseProg\ExeriseProg\bin\Debug\ExeriseProg.exe.config
+C:\Users\Derec\Desktop\ExeriseProg\ExeriseProg\bin\Debug\ExeriseProg.exe
+C:\Users\Derec\Desktop\ExeriseProg\ExeriseProg\bin\Debug\ExeriseProg.pdb
+C:\Users\Derec\Desktop\ExeriseProg\ExeriseProg\obj\Debug\ExeriseProg.csprojAssemblyReference.cache
+C:\Users\Derec\Desktop\ExeriseProg\ExeriseProg\obj\Debug\ExeriseProg.Properties.Resources.resources
+C:\Users\Derec\Desktop\ExeriseProg\ExeriseProg\obj\Debug\ExeriseProg.csproj.GenerateResource.cache
+C:\Users\Derec\Desktop\ExeriseProg\ExeriseProg\obj\Debug\ExeriseProg.exe
+C:\Users\Derec\Desktop\ExeriseProg\ExeriseProg\obj\Debug\ExeriseProg.pdb
+C:\Users\Derec\Desktop\ExeriseProg\ExeriseProg\obj\Debug\ExeriseProg.Calculatrice.resources
